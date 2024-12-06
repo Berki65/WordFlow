@@ -111,9 +111,9 @@ struct EnglishNumberView: View {
     func numberToWords(_ number: Int) -> String {
         guard number > 0 else { return "zero" }
 
-        let belowTwenty = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+        _ = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
                            "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-        let tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+        _ = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
         let units = ["", "thousand", "million", "billion"]
 
         var num = number

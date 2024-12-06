@@ -5,40 +5,36 @@ struct HomeView: View {
 
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color(.systemGray6)
-                    .edgesIgnoringSafeArea(.all)
+            VStack(spacing: 30) {
+                Text("Which language would you like to study, \(user.name)?")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 40)
 
-                VStack(spacing: 30) {
-                    Text("Which language would you like to study, \(user.name)?")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 40)
-
-                    HStack(spacing: 20) {
-                        // Language Selection Buttons
-                        NavigationLink(destination: ModeSelectionView(user: user, selectedLanguage: "Korean")) {
-                            LanguageButton(language: "Korean", color: .blue)
-                        }
-
-                        NavigationLink(destination: ModeSelectionView(user: user, selectedLanguage: "English")) {
-                            LanguageButton(language: "English", color: .green)
-                        }
+                HStack(spacing: 20) {
+                    NavigationLink(value: "Korean") {
+                        LanguageButton(language: "Korean", color: .blue)
                     }
-                    .padding(.horizontal)
 
-                    Spacer()
+                    NavigationLink(value: "English") {
+                        LanguageButton(language: "English", color: .green)
+                    }
                 }
                 .padding(.horizontal)
+
+                Spacer()
             }
+            .padding(.horizontal)
             .navigationTitle("Select Language")
+            .navigationDestination(for: String.self) { language in
+                ModeSelectionView(user: user, selectedLanguage: language)
+            }
         }
     }
 }
 
-// Reusable Language Button Component
 struct LanguageButton: View {
     let language: String
     let color: Color

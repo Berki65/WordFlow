@@ -1,5 +1,10 @@
 import SwiftUI
 
+enum PracticeMode: Hashable {
+    case numbers
+    case vocabulary
+}
+
 struct ModeSelectionView: View {
     var user: User
     var selectedLanguage: String
@@ -15,12 +20,13 @@ struct ModeSelectionView: View {
             Spacer()
 
             VStack(spacing: 20) {
-                // Mode Selection Buttons
-                NavigationLink(destination: PracticeView(language: selectedLanguage, mode: "Numbers")) {
+                // NavigationLink for Numbers
+                NavigationLink(value: PracticeMode.numbers) {
                     ModeButtonLabel(title: "\(selectedLanguage) Numbers")
                 }
 
-                NavigationLink(destination: PracticeView(language: selectedLanguage, mode: "Vocabulary")) {
+                // NavigationLink for Vocabulary
+                NavigationLink(value: PracticeMode.vocabulary) {
                     ModeButtonLabel(title: "\(selectedLanguage) Vocabulary")
                 }
             }
@@ -29,10 +35,26 @@ struct ModeSelectionView: View {
         }
         .padding()
         .navigationTitle("Select Mode")
+        .navigationDestination(for: PracticeMode.self) { mode in
+            destinationView(for: mode)
+        }
+    }
+
+    @ViewBuilder
+    private func destinationView(for mode: PracticeMode) -> some View {
+        switch (selectedLanguage, mode) {
+        case ("English", .numbers):
+            EnglishNumberView()
+        case ("Korean", .numbers):
+            KoreanNumberView()
+        case ("Korean", .vocabulary):
+            Text("Vocabulary Practice Coming Soon!") // Placeholder
+        default:
+            Text("Coming Soon!")
+        }
     }
 }
 
-// Reusable Mode Button Label
 struct ModeButtonLabel: View {
     let title: String
 
@@ -44,5 +66,6 @@ struct ModeButtonLabel: View {
             .background(Color.blue)
             .cornerRadius(12)
             .shadow(radius: 5)
+            .padding(.horizontal)
     }
 }
