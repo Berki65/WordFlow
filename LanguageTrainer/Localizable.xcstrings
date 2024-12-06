@@ -1,0 +1,111 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@, what would you like to practice in %@?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, what would you like to practice in %2$@?"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "Answer: %@" : {
+
+    },
+    "Check" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Enter your name" : {
+
+    },
+    "Enter your translation..." : {
+
+    },
+    "Friendly Mode" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Input" : {
+
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Korean Vocabulary" : {
+
+    },
+    "Max Value" : {
+
+    },
+    "Number Type" : {
+
+    },
+    "Please let me know your name so we can get started!" : {
+
+    },
+    "Practicing %@ in %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Practicing %1$@ in %2$@"
+          }
+        }
+      }
+    },
+    "Select Language" : {
+
+    },
+    "Select Max Value" : {
+
+    },
+    "Select Mode" : {
+
+    },
+    "Show Answer" : {
+
+    },
+    "Skip" : {
+
+    },
+    "SKIP" : {
+
+    },
+    "Translate the following word:" : {
+
+    },
+    "Type your answer here..." : {
+
+    },
+    "Welcome to Language Trainer!" : {
+
+    },
+    "Which language would you like to study, %@?" : {
+
+    }
+  },
+  "version" : "1.0"
+}
