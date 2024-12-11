@@ -39,7 +39,7 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
 ## Setup Guide
 
-### Prerequisites
+#### Prerequisites
 - Xcode 18.0 or later
 - iOS 16.1 or later
 - Swift 6.0 or later
