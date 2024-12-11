@@ -20,11 +20,13 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
 ## Screenshots
 
-<!-- Replace with actual screenshots -->
-![Vocabulary Training](https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e)
+<div style="display: flex; justify-content: space-between;">
 
-![Number Training](path-to-screenshot2.png)
-![Fast Translations](path-to-screenshot3.png)
+<img src="https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e" alt="Vocabulary Training" width="30%" />
+<img src="path-to-screenshot2.png" alt="Number Training" width="30%" />
+<img src="path-to-screenshot3.png" alt="Fast Translations" width="30%" />
+
+</div>
 
 ## Setup Guide
 
