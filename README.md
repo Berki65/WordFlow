@@ -36,15 +36,15 @@
    git clone https://github.com/your-username/WordFlow.git
    cd WordFlow
    ```
-2.	Open the project in Xcode:
+2. Open the project in Xcode:
    ```bash
-  	open WordFlow.xcodeproj
+   open WordFlow.xcodeproj
    ```
 3. Install dependencies (if applicable):
    ```
    pod install  # Or configure dependencies via Swift Package Manager
    ```
-4.	Run the app on a simulator or connected device:
+4. Run the app on a simulator or connected device:
    ```
    In Xcode, press Cmd + R.
    ```
