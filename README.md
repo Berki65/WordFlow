@@ -18,6 +18,7 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 - [Screenshots](#screenshots)
 - [Setup Guide](#setup-guide)
 - [Usage](#usage)
+- [Contribution](#contribution)
 - [License](#license)
 - [Final Words](#final-words)
 
