@@ -19,7 +19,7 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 - [Setup Guide](#setup-guide)
 - [Usage](#usage)
 - [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Final Words](#final-words)
 
 ## Key Features
 1. **Vocabulary Training**: Interactive quizzes for mastering essential words.
