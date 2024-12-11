@@ -26,7 +26,9 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 <div style="display: flex; justify-content: space-between;">
 
 <img src="https://github.com/user-attachments/assets/83469556-b03a-4ed0-9706-69e2b2cc63a7" alt="Homescreen" width="25%" />
+Select your Language you want to study.
 <img src="https://github.com/user-attachments/assets/856981f5-0a9c-4ca3-b828-ec469ad8eb6a" alt="Number Training" width="25%" />
+
 <img src="https://github.com/user-attachments/assets/4a9a08e5-b0ae-462d-82e0-9ea414c61827" alt="Vocabulary" width="25%" />
 <img src="https://github.com/user-attachments/assets/420665a6-d9aa-4a4a-b1e6-70c3fc44ed56" alt="Fast Translations" width="25%" />
 </div>
@@ -62,6 +64,14 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 	2.	Use the Vocabulary Trainer to learn new words.
 	3.	Practice numbers using the Number Trainer module.
 	4.	Use the Fast Translations feature for on-the-go learning.
+
+ ## Contribution
+ How **YOU** can help me?
+- Localization in the App
+- More Language Support
+- Implementing DesignPatterns
+- bug fixing
+- 
 
  ## License
  This project is licensed under the MIT License. You are free to use, modify, and distribute this code under the terms of the license.
