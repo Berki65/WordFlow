@@ -1,4 +1,4 @@
-![WordFlow Logo](https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f) 
+<img src="https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f" alt="logo" width="25%"/?
 # WordFlow
 **WordFlow** is an open-source Swift iOS application designed to make language learning simple and fun. The app focuses on helping users study vocabulary, practice numbers, and quickly translate words in multiple languages.
 
