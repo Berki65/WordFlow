@@ -10,7 +10,7 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
  _Note: To test the app on TestFlight, ensure you have the TestFlight app installed on your iOS device._
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-![iOS 1*](https://img.shields.io/badge/iOS-18%2B-gray.svg)
+![iOS 18.0*](https://img.shields.io/badge/iOS-18.0%2B-gray.svg)
 ![Swift](https://img.shields.io/badge/Swift-6.0-orange)
 
 ## Table of Contents
@@ -57,8 +57,8 @@ The project will soon adapt the **MVVM** design pattern.
 ## Setup Guide
 
 ### Prerequisites
-- Xcode 18.0 or later
-- iOS 16.1 or later
+- Xcode 16.1 or later
+- iOS 18.0 or later
 - Swift 6.0 or later
 
 ## Installation
