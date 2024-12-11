@@ -70,7 +70,8 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 	4.	Use the Fast Translations feature for on-the-go learning.
 
 ## Contribution
-How **YOU** can help me?
+How **YOU** can help me!
+- **Widget** implementation 
 - **Localization in the App:** Help translate the app into more languages.
 - **More Language Support:** Add vocabulary or number training for new languages.
 - **Implementing Design Patterns:** Refactor and improve code structure.
