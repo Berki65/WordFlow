@@ -22,18 +22,19 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
 <div style="display: flex; justify-content: space-between;">
 
-<img src="https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e" alt="Vocabulary Training" width="30%" />
-<img src="path-to-screenshot2.png" alt="Number Training" width="30%" />
-<img src="path-to-screenshot3.png" alt="Fast Translations" width="30%" />
-
+<img src="https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e" alt="Vocabulary Training" width="25%" />
+<img src="https://github.com/user-attachments/assets/856981f5-0a9c-4ca3-b828-ec469ad8eb6a" alt="Number Training" width="25%" />
+<img src="https://github.com/user-attachments/assets/4a9a08e5-b0ae-462d-82e0-9ea414c61827" alt="Fast Translations" width="25%" />
+<img src="path-to-screenshot3.png" alt="Fast Translations" width="25%" />
 </div>
+
 
 ## Setup Guide
 
 ### Prerequisites
-- Xcode 14.0 or later
-- iOS 15.0 or later
-- Swift 5.7 or later
+- Xcode 18.0 or later
+- iOS 16.1 or later
+- Swift 6.0 or later
 
 ### Installation
 #### 1. Clone the repository:
