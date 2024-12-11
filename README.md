@@ -35,3 +35,26 @@
    ```bash
    git clone https://github.com/your-username/WordFlow.git
    cd WordFlow
+   ```
+2.	Open the project in Xcode:
+   ```bash
+  	open WordFlow.xcodeproj
+   ```
+3. Install dependencies (if applicable):
+   ```
+   pod install  # Or configure dependencies via Swift Package Manager
+   ```
+4.	Run the app on a simulator or connected device:
+   ```
+   In Xcode, press Cmd + R.
+   ```
+
+## Usage
+	1.	Open the app and select your preferred language.
+	2.	Use the Vocabulary Trainer to learn new words.
+	3.	Practice numbers using the Number Trainer module.
+	4.	Use the Fast Translations feature for on-the-go learning.
+
+ ## License
+ This project is licensed under the MIT License. You are free to use, modify, and distribute this code under the terms of the license.
+
