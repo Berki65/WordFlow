@@ -7,13 +7,17 @@
 
 Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
+ _Note: To test the app on TestFlight, ensure you have the TestFlight app installed on your iOS device._
+
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-![iOS 16.1+](https://img.shields.io/badge/iOS-16.1%2B-blue.svg)
-![Swift](https://img.shields.io/badge/Swift-6.0-orange)
+![iOS 18.0*](https://img.shields.io/badge/iOS-18.0%2B-gray.svg)
+![Swift](https://img.shields.io/badge/Swift-6.0%2B-orange)
 
 ## Table of Contents
 - [Key Features](#key-features)
 - [Screenshots](#screenshots)
+- [Technical Stack](#technical-stack)
+- [Roadmap](#roadmap)
 - [Setup Guide](#setup-guide)
 - [Usage](#usage)
 - [Contribution](#contribution)
@@ -37,11 +41,24 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 <img src="https://github.com/user-attachments/assets/420665a6-d9aa-4a4a-b1e6-70c3fc44ed56" alt="Fast Translations" width="35%" />
 </div>
 
+## Technical Stack
+WordFlow is built using:
+- **Swift 6.0**: For iOS app development.
+- **Xcode 18.0+**: Integrated development environment.
+- **Widgetkit implementation soon~**
+
+The project will soon adapt the **MVVM** design pattern.
+
+## Roadmap
+- **WidgetKit**: Will enable users to access key features like translation and vocabulary tips directly from their home screen.
+- **Advanced Translation Features**: Offline translation capabilities or even own model implementation.
+- **Enhanced UI/UX**: Add animations, improve accessibility, and refine onboarding for a smoother user experience.
+  
 ## Setup Guide
 
 ### Prerequisites
-- Xcode 18.0 or later
-- iOS 16.1 or later
+- Xcode 16.1 or later
+- iOS 18.0 or later
 - Swift 6.0 or later
 
 ## Installation
@@ -82,5 +99,5 @@ How **YOU** can help me!
  This project is licensed under the MIT License. You are free to use, modify, and distribute this code under the terms of the license.
 
 ## Final Words
-This project is part of my course on **Open-Source Software** at **Seoul National University of Science and Technology (SeoulTech)**. It is designed to showcase how open-source development can contribute to language learning innovations. Your feedback and contributions are welcome!
+This project is part of my course on **Open-Source Software** at **Seoul National University of Science and Technology (SeoulTech)**. It demonstrates how open-source development can contribute to innovations in language learning. Your feedback and contributions are greatly appreciated!
 
