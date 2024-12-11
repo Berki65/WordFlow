@@ -79,7 +79,7 @@ struct TranslationView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 // Output Text (read-only)
-                Text("비밀번호")
+                Text(translatedText)
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color.gray.opacity(0.1))
