@@ -49,7 +49,7 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 ## Installation
 ### 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/WordFlow.git
+   git clone https://github.com/Berki65/WordFlow
    cd WordFlow
    ```
 ### 2. Open the project in Xcode:
