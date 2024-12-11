@@ -1,5 +1,5 @@
 <div style="display: flex; justify-content: space-between;">
-<img src="https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f" alt="logo" width="5%"/?
+<img src="https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f" alt="logo" width="10%"/?
 </div>
 	
  # WordFlow
