@@ -11,7 +11,7 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 ![iOS 18.0*](https://img.shields.io/badge/iOS-18.0%2B-gray.svg)
-![Swift](https://img.shields.io/badge/Swift-6.0-orange)
+![Swift](https://img.shields.io/badge/Swift-6.0%2B-orange)
 
 ## Table of Contents
 - [Key Features](#key-features)
