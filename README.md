@@ -37,6 +37,14 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
 <img src="https://github.com/user-attachments/assets/420665a6-d9aa-4a4a-b1e6-70c3fc44ed56" alt="Fast Translations" width="35%" />
 </div>
 
+## Technical Stack
+WordFlow is built using:
+- **Swift 6.0**: For iOS app development.
+- **Xcode 18.0+**: Integrated development environment.
+- **Widgetkit soon~**
+
+The project will soon adapt the **MVMM** design pattern.
+
 ## Setup Guide
 
 ### Prerequisites
