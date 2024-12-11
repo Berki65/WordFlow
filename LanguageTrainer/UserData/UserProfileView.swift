@@ -5,7 +5,7 @@ struct UserProfileView: View {
     @Environment(\.modelContext) private var context
     @State private var isEditing = false
     @Bindable var user: User
-
+    
     var body: some View {
         VStack {
             if isEditing {
@@ -13,14 +13,14 @@ struct UserProfileView: View {
                 TextField("Enter new name", text: $user.name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-
+                
                 // Action Buttons: Cancel and Save
                 HStack {
                     Button("Cancel") {
                         isEditing = false
                     }
                     .padding()
-
+                    
                     Button("Save") {
                         saveChanges()
                         isEditing = false
@@ -33,7 +33,7 @@ struct UserProfileView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding()
-
+                
                 // Edit Button: Switch to editing mode
                 Button("Edit Name") {
                     isEditing = true
@@ -44,7 +44,7 @@ struct UserProfileView: View {
         }
         .navigationTitle("Profile")
     }
-
+    
     // Save Changes to the Context
     private func saveChanges() {
         do {

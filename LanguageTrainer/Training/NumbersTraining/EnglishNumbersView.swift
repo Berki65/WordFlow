@@ -8,15 +8,15 @@ struct EnglishNumberView: View {
     @State private var friendlyNumberMode = false
     @State private var selectedMaxValue = 10000
     @State private var showAnswer = false
-
+    
     // MARK: - Enum
     enum NumberType: String, CaseIterable {
         case Cardinal
         case Ordinal
     }
-
+    
     let maxValueOptions = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
-
+    
     // MARK: - Body
     var body: some View {
         ZStack {
@@ -27,45 +27,45 @@ struct EnglishNumberView: View {
                 endPoint: .bottom
             )
             .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
-
+                
                 // Card Display Section
                 cardSection
                     .padding(.horizontal)
                 
                 // Bottom Sheet Input Section
                 bottomSheetInputSection
-
+                
                 Spacer()
                 
                 // Controls Section
                 controlsSection
                     .padding(.horizontal)
-
+                
             }
         }
         .onAppear {
             nextNumber()
         }
     }
-
+    
     // MARK: - Card Section
     private var cardSection: some View {
         VStack(spacing: 10) {
             Text("Practice Mode")
                 .font(.title2.bold())
                 .foregroundColor(.primary)
-
+            
             Text("What's this number?")
                 .font(.headline)
                 .foregroundColor(.secondary)
-
+            
             Text("\(givenNumber)")
                 .font(.system(size: 64, weight: .bold, design: .rounded))
                 .foregroundColor(.primary)
                 .padding()
-
+            
             if showAnswer {
                 Text(convertedNumberText())
                     .foregroundColor(.blue)
@@ -80,18 +80,18 @@ struct EnglishNumberView: View {
                 .shadow(radius: 10)
         )
     }
-
+    
     // MARK: - Controls Section
     private var controlsSection: some View {
         VStack(spacing: 15) {
             numberTypePicker
-
+            
             Toggle("Friendly Mode", isOn: $friendlyNumberMode)
                 .toggleStyle(SwitchToggleStyle(tint: Color.purple))
-
+            
             Toggle("Show Answer", isOn: $showAnswer)
                 .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-
+            
             maxValuePicker
         }
         .padding()
@@ -101,7 +101,7 @@ struct EnglishNumberView: View {
                 .shadow(radius: 10)
         )
     }
-
+    
     // MARK: - Bottom Sheet Input Section
     private var bottomSheetInputSection: some View {
         VStack(spacing: 10) {
@@ -114,7 +114,7 @@ struct EnglishNumberView: View {
                 .onChange(of: userInput) {
                     checkForAnswer()
                 }
-
+            
             Button(action: {
                 nextNumber()
                 userInput = ""
@@ -137,7 +137,7 @@ struct EnglishNumberView: View {
         )
         .padding(.horizontal)
     }
-
+    
     private var numberTypePicker: some View {
         Picker("Number Type", selection: $selectedNumberType) {
             ForEach(NumberType.allCases, id: \.self) { type in
@@ -146,7 +146,7 @@ struct EnglishNumberView: View {
         }
         .pickerStyle(SegmentedPickerStyle())
     }
-
+    
     private var maxValuePicker: some View {
         Picker("Max Value", selection: $selectedMaxValue) {
             ForEach(maxValueOptions, id: \.self) { value in
@@ -155,7 +155,7 @@ struct EnglishNumberView: View {
         }
         .pickerStyle(MenuPickerStyle())
     }
-
+    
     // MARK: - Methods
     private func convertedNumberText() -> String {
         switch selectedNumberType {
@@ -165,7 +165,7 @@ struct EnglishNumberView: View {
             return numberToOrdinalWords(givenNumber)
         }
     }
-
+    
     private func randomNumberGenerator() -> Int {
         let rawNumber = Int.random(in: 0..<selectedMaxValue)
         if friendlyNumberMode && rawNumber >= 1000 {
@@ -173,23 +173,23 @@ struct EnglishNumberView: View {
         }
         return rawNumber
     }
-
+    
     private func nextNumber() {
         givenNumber = randomNumberGenerator()
     }
-
+    
     private func numberToWords(_ number: Int) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .spellOut
         return formatter.string(from: NSNumber(value: number)) ?? ""
     }
-
+    
     private func numberToOrdinalWords(_ number: Int) -> String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .ordinal
         return formatter.string(from: NSNumber(value: number)) ?? ""
     }
-
+    
     private func checkForAnswer() {
         let correctAnswer = convertedNumberText().trimmingCharacters(in: .whitespacesAndNewlines)
         if userInput.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == correctAnswer.lowercased() {

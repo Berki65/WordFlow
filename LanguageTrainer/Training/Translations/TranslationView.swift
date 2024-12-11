@@ -8,12 +8,12 @@ struct TranslationView: View {
     @State private var arrowRotation: Double = 0
     @State private var inputText: String = ""
     @State private var translatedText: String = "Translated text will appear here."
-
+    
     let availableLanguages = [
         "Korean", "English", "German", "Spanish",
         "French", "Japanese", "Turkish", "Chinese"
     ]
-
+    
     var body: some View {
         VStack(spacing: 30) {
             HStack {
@@ -35,7 +35,7 @@ struct TranslationView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.blue, lineWidth: 1)
                 )
-
+                
                 // Animated Arrow Button
                 Button(action: {
                     withAnimation(.easeInOut(duration: 0.5)) {
@@ -50,7 +50,7 @@ struct TranslationView: View {
                         .scaleEffect(isReversed ? 1.1 : 1.0)
                         .animation(.spring(response: 0.5, dampingFraction: 0.6), value: isReversed)
                 }
-
+                
                 // Target Language Picker
                 Picker("Target Language", selection: $targetLanguage) {
                     ForEach(availableLanguages, id: \.self) { language in
@@ -71,13 +71,13 @@ struct TranslationView: View {
                 )
             }
             .padding()
-
-
+            
+            
             VStack(spacing: 20) {
                 Text("Translation result:")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
+                
                 // Output Text (read-only)
                 Text(translatedText)
                     .padding()
@@ -88,11 +88,11 @@ struct TranslationView: View {
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray, lineWidth: 1)
                     )
-
+                
                 Text("Enter text to translate:")
                     .font(.headline)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
+                
                 // Input Text Field
                 TextField("Type here...", text: $inputText)
                     .padding()
@@ -104,7 +104,7 @@ struct TranslationView: View {
                     )
             }
             .padding()
-
+            
             // Translate Button
             Button(action: translateText) {
                 Text("Translate")
@@ -117,18 +117,18 @@ struct TranslationView: View {
                     .shadow(radius: 5)
             }
             .padding()
-
+            
             Spacer()
         }
         .padding()
-//        .navigationTitle("Translate Text")
+        //        .navigationTitle("Translate Text")
     }
-
+    
     private func swapLanguages() {
         isReversed.toggle()
         (sourceLanguage, targetLanguage) = (targetLanguage, sourceLanguage)
     }
-
+    
     private func translateText() {
         // Placeholder translation logic
         // Replace this with actual translation API logic

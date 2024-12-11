@@ -56,42 +56,42 @@ struct EnglishVocabularyView: View {
     @State private var currentIndex = Int.random(in: 0..<50)
     @State private var userTranslation = ""
     @State private var feedbackMessage = ""
-
+    
     var body: some View {
         VStack {
             Text("Translate the following word:")
                 .font(.headline)
                 .padding()
-
+            
             Text(vocabulary[currentIndex].0)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
-
+            
             TextField("Enter your translation...", text: $userTranslation)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
                 .onSubmit {
                     checkTranslation()
                 }
-
+            
             Button("Check") {
                 checkTranslation()
             }
             .padding()
             .buttonStyle(.borderedProminent)
-
+            
             Text(feedbackMessage)
                 .font(.headline)
                 .padding()
                 .foregroundColor(feedbackMessage == "Correct!" ? .green : .red)
-
+            
             Spacer()
         }
         .padding()
         .navigationTitle("English Vocabulary")
     }
-
+    
     func checkTranslation() {
         let correctTranslation = vocabulary[currentIndex].1.lowercased()
         if userTranslation.lowercased() == correctTranslation {
@@ -104,7 +104,7 @@ struct EnglishVocabularyView: View {
             feedbackMessage = "Try again!"
         }
     }
-
+    
     func nextWord() {
         currentIndex = Int.random(in: 0..<vocabulary.count)
         userTranslation = ""

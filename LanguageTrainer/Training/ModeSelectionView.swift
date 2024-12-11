@@ -9,7 +9,7 @@ enum PracticeMode: Hashable {
 struct ModeSelectionView: View {
     var user: User
     var selectedLanguage: String
-
+    
     var body: some View {
         VStack {
             // Welcome Text
@@ -18,9 +18,9 @@ struct ModeSelectionView: View {
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .padding()
-
+            
             Spacer()
-
+            
             // Mode Selection Buttons
             VStack(spacing: 20) {
                 NavigationLink(value: PracticeMode.numbers) {
@@ -33,7 +33,7 @@ struct ModeSelectionView: View {
                     ModeButtonLabel(title: "Translate Text")
                 }
             }
-
+            
             Spacer()
         }
         .padding()
@@ -42,7 +42,7 @@ struct ModeSelectionView: View {
             destinationView(for: mode)
         }
     }
-
+    
     // Destination View Builder
     @ViewBuilder
     private func destinationView(for mode: PracticeMode) -> some View {
@@ -68,7 +68,7 @@ struct ModeSelectionView: View {
 // Custom Button Style
 struct ModeButtonLabel: View {
     let title: String
-
+    
     var body: some View {
         Text(title)
             .font(.headline)

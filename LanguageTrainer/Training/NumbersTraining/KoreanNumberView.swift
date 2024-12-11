@@ -8,19 +8,19 @@ struct KoreanNumberView: View {
     @State private var friendlyNumberMode = false
     @State private var selectedMaxValue = 10000
     @State private var showAnswer = false
-
+    
     // MARK: - Constants
     let koreanSinoInKoreanToNine = ["영", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
     let koreanNativeInKoreanToNine = ["공", "하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟", "아홉"]
     let koreanTenner = ["십", "백", "천", "만", "십만", "백만", "천만", "억", "조"]
     let maxValueOptions = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
-
+    
     // MARK: - Enum
     enum NumberType: String, CaseIterable {
         case Sino
         case Native
     }
-
+    
     // MARK: - Body
     var body: some View {
         ZStack {
@@ -31,17 +31,17 @@ struct KoreanNumberView: View {
                 endPoint: .bottom
             )
             .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
                 // Card Display Section
                 cardSection
                     .padding(.horizontal)
-
+                
                 // Bottom Sheet Input Section
                 bottomSheetInputSection
-
+                
                 Spacer()
-
+                
                 // Controls Section
                 controlsSection
                     .padding(.horizontal)
@@ -51,23 +51,23 @@ struct KoreanNumberView: View {
             nextNumber()
         }
     }
-
+    
     // MARK: - Card Section
     private var cardSection: some View {
         VStack(spacing: 10) {
             Text("Practice Mode")
                 .font(.title2.bold())
                 .foregroundColor(.primary)
-
+            
             Text("What's this number?")
                 .font(.headline)
                 .foregroundColor(.secondary)
-
+            
             Text("\(givenNumber)")
                 .font(.system(size: 64, weight: .bold, design: .rounded))
                 .foregroundColor(.primary)
                 .padding()
-
+            
             if showAnswer {
                 Text(convertedNumberText())
                     .font(.title3)
@@ -83,7 +83,7 @@ struct KoreanNumberView: View {
                 .shadow(radius: 10)
         )
     }
-
+    
     // MARK: - Bottom Sheet Input Section
     private var bottomSheetInputSection: some View {
         VStack(spacing: 10) {
@@ -96,7 +96,7 @@ struct KoreanNumberView: View {
                 .onChange(of: userInput) {
                     checkForAnswer()
                 }
-
+            
             Button(action: {
                 nextNumber()
                 userInput = ""
@@ -119,18 +119,18 @@ struct KoreanNumberView: View {
         )
         .padding(.horizontal)
     }
-
+    
     // MARK: - Controls Section
     private var controlsSection: some View {
         VStack(spacing: 15) {
             numberTypePicker
-
+            
             Toggle("Friendly Mode", isOn: $friendlyNumberMode)
                 .toggleStyle(SwitchToggleStyle(tint: Color.blue))
-
+            
             Toggle("Show Answer", isOn: $showAnswer)
                 .toggleStyle(SwitchToggleStyle(tint: Color.green))
-
+            
             maxValuePicker
         }
         .padding()
@@ -140,7 +140,7 @@ struct KoreanNumberView: View {
                 .shadow(radius: 10)
         )
     }
-
+    
     // MARK: - Views
     private var numberTypePicker: some View {
         Picker("Number Type", selection: $selectedNumberType) {
@@ -150,7 +150,7 @@ struct KoreanNumberView: View {
         }
         .pickerStyle(SegmentedPickerStyle())
     }
-
+    
     private var maxValuePicker: some View {
         Picker("Max Value", selection: $selectedMaxValue) {
             ForEach(maxValueOptions, id: \.self) { value in
@@ -161,7 +161,7 @@ struct KoreanNumberView: View {
         }
         .pickerStyle(MenuPickerStyle())
     }
-
+    
     // MARK: - Methods
     private func convertedNumberText() -> String {
         switch selectedNumberType {
@@ -171,24 +171,24 @@ struct KoreanNumberView: View {
             return convertToNativeKorean(givenNumber)
         }
     }
-
+    
     private func randomNumberGenerator() {
         var maxValue = selectedMaxValue
-
+        
         if selectedNumberType == .Native {
             maxValue = min(maxValue, 100)
         }
-
+        
         givenNumber = Int.random(in: 0..<maxValue)
         if friendlyNumberMode && givenNumber >= 1000 {
             givenNumber = (givenNumber / 1000) * 1000
         }
     }
-
+    
     private func nextNumber() {
         randomNumberGenerator()
     }
-
+    
     
     func convertToSinoKorean(_ number: Int) -> String {
         guard number > 0 else {
@@ -269,7 +269,7 @@ struct KoreanNumberView: View {
         
         return result
     }
-
+    
     func convertToNativeKorean(_ number: Int) -> String {
         guard number <= 99 else {
             return "Unsupported"
@@ -285,7 +285,7 @@ struct KoreanNumberView: View {
             return tensPart + unitsPart
         }
     }
-
+    
     private func checkForAnswer() {
         let correctAnswer: String
         switch selectedNumberType {
@@ -294,7 +294,7 @@ struct KoreanNumberView: View {
         case .Native:
             correctAnswer = convertToNativeKorean(givenNumber)
         }
-
+        
         if userInput.trimmingCharacters(in: .whitespacesAndNewlines) == correctAnswer {
             userInput = ""
             nextNumber()

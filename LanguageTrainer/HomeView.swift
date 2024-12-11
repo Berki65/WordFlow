@@ -4,7 +4,7 @@ import SwiftUI
 struct HomeView: View {
     /// The current user of the application.
     var user: User
-
+    
     /// A list of available languages for study, each paired with a specific color for display.
     let languages = [
         ("Korean", Color.red),
@@ -16,14 +16,14 @@ struct HomeView: View {
         ("Turkish", Color.gray),
         ("Chinese", Color.gray)
     ]
-
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 30) {
                     // Welcome message
                     welcomeMessage
-
+                    
                     // Language selection grid
                     languageGrid
                 }
@@ -50,7 +50,7 @@ extension HomeView {
             .multilineTextAlignment(.leading)
             .padding(.top, 25)
     }
-
+    
     /// Displays the grid of languages available for selection.
     private var languageGrid: some View {
         LazyVGrid(
@@ -68,7 +68,7 @@ extension HomeView {
             ModeSelectionView(user: user, selectedLanguage: language)
         }
     }
-
+    
     /// The button to navigate to the user's profile view.
     private var profileButton: some View {
         NavigationLink(destination: UserProfileView(user: user)) {
@@ -82,10 +82,10 @@ extension HomeView {
 struct LanguageButton: View {
     /// The name of the language to display.
     let language: String
-
+    
     /// The background color for the button.
     let color: Color
-
+    
     var body: some View {
         VStack {
             Text(language)

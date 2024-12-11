@@ -5,13 +5,13 @@ struct UserSetupView: View {
     @Environment(\.modelContext) private var modelContext
     @State private var userName: String = ""
     @State private var isUserSaved: Bool = false
-
+    
     var body: some View {
         ZStack {
             // Background Color
             Color(.systemGray6)
                 .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
                 // Welcome Message
                 VStack(spacing: 10) {
@@ -20,7 +20,7 @@ struct UserSetupView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.blue)
                         .padding(.top, 40)
-
+                    
                     Text("Please let me know your name so we can get started!")
                         .font(.body)
                         .foregroundColor(.primary)
@@ -29,17 +29,17 @@ struct UserSetupView: View {
                         .padding(.top, 60)
                 }
                 .frame(maxWidth: .infinity, alignment: .top)
-
+                
                 Spacer()
-
+                
                 // Name Input Field
                 TextField("Enter your name", text: $userName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal, 40)
                     .padding(.bottom, 200)
-
+                
                 Spacer()
-
+                
                 // Continue Button
                 Button(action: {
                     saveUserName(name: userName)
@@ -61,9 +61,9 @@ struct UserSetupView: View {
             HomeView(user: User(name: userName))
         }
     }
-
+    
     // MARK: - Methods
-
+    
     /// Saves the user's name to the model context
     private func saveUserName(name: String) {
         let user = User(name: name)
