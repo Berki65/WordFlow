@@ -16,11 +16,8 @@
 		407EDDCB2D02F1D100F53DB5 /* KoreanVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EDDCA2D02F1D100F53DB5 /* KoreanVocabularyView.swift */; };
 		4088B3632CFEAB82003DBB0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088B3622CFEAB82003DBB0D /* HomeView.swift */; };
 		4088B3652CFEB1E0003DBB0D /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088B3642CFEB1E0003DBB0D /* UserSetupView.swift */; };
-		409E7B832D094C3900A2680F /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B822D094C3900A2680F /* AddWordView.swift */; };
 		409E7B862D0965E700A2680F /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B852D0965E700A2680F /* TranslationView.swift */; };
 		409E7B882D098E6700A2680F /* EnglishVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B872D098E6700A2680F /* EnglishVocabularyView.swift */; };
-		409E7B8A2D0997D500A2680F /* VocabularyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B892D0997D500A2680F /* VocabularyData.swift */; };
-		409E7B8C2D0998F800A2680F /* VocabularyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */; };
 		40B045B72C80B96C0074E2C6 /* LanguageTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B045B62C80B96C0074E2C6 /* LanguageTrainer.swift */; };
 		40B045BB2C80B96D0074E2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B045BA2C80B96D0074E2C6 /* Assets.xcassets */; };
 		40B045BE2C80B96D0074E2C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B045BD2C80B96D0074E2C6 /* Preview Assets.xcassets */; };
@@ -53,11 +50,8 @@
 		409E7B5E2D0942E700A2680F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		409E7B652D09454700A2680F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		409E7B672D09454700A2680F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		409E7B822D094C3900A2680F /* AddWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
 		409E7B852D0965E700A2680F /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		409E7B872D098E6700A2680F /* EnglishVocabularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishVocabularyView.swift; sourceTree = "<group>"; };
-		409E7B892D0997D500A2680F /* VocabularyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyData.swift; sourceTree = "<group>"; };
-		409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyEntry.swift; sourceTree = "<group>"; };
 		40B045B32C80B96C0074E2C6 /* LanguageTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B045B62C80B96C0074E2C6 /* LanguageTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTrainer.swift; sourceTree = "<group>"; };
 		40B045BA2C80B96D0074E2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,7 +82,6 @@
 		407EDDBC2D01732700F53DB5 /* UserData */ = {
 			isa = PBXGroup;
 			children = (
-				409E7B7D2D094BFD00A2680F /* Translation */,
 				407EDDBD2D01733E00F53DB5 /* UserDataHandler.swift */,
 				407EDDBF2D0173B400F53DB5 /* UserProfileView.swift */,
 				4088B3642CFEB1E0003DBB0D /* UserSetupView.swift */,
@@ -123,16 +116,6 @@
 				409E7B672D09454700A2680F /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		409E7B7D2D094BFD00A2680F /* Translation */ = {
-			isa = PBXGroup;
-			children = (
-				409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */,
-				409E7B822D094C3900A2680F /* AddWordView.swift */,
-				409E7B892D0997D500A2680F /* VocabularyData.swift */,
-			);
-			path = Translation;
 			sourceTree = "<group>";
 		};
 		409E7B842D0965E200A2680F /* Translations */ = {
@@ -267,12 +250,9 @@
 				4088B3632CFEAB82003DBB0D /* HomeView.swift in Sources */,
 				407EDDC32D0179C900F53DB5 /* RootView.swift in Sources */,
 				40B045B72C80B96C0074E2C6 /* LanguageTrainer.swift in Sources */,
-				409E7B8A2D0997D500A2680F /* VocabularyData.swift in Sources */,
-				409E7B832D094C3900A2680F /* AddWordView.swift in Sources */,
 				409E7B882D098E6700A2680F /* EnglishVocabularyView.swift in Sources */,
 				409E7B862D0965E700A2680F /* TranslationView.swift in Sources */,
 				4088B3652CFEB1E0003DBB0D /* UserSetupView.swift in Sources */,
-				409E7B8C2D0998F800A2680F /* VocabularyEntry.swift in Sources */,
 				407EDDBB2D016A7400F53DB5 /* EnglishNumbersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
