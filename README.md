@@ -4,7 +4,8 @@
 	
  # WordFlow
 **WordFlow** is an open-source Swift iOS application designed to make language learning simple and fun. The app focuses on helping users study vocabulary, practice numbers, and quickly translate words in multiple languages.
-
+![Swift](https://img.shields.io/badge/Swift-6.0-orange)
+![iOS](https://img.shields.io/badge/iOS-16.1-blue)
 Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
 ## Table of Contents
@@ -64,17 +65,17 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 	3.	Practice numbers using the Number Trainer module.
 	4.	Use the Fast Translations feature for on-the-go learning.
 
- ## Contribution
- How **YOU** can help me?
-- Localization in the App
-- More Language Support
-- Implementing DesignPatterns
-- bug fixing
-- 
+## Contribution
+How **YOU** can help me?
+- **Localization in the App:** Help translate the app into more languages.
+- **More Language Support:** Add vocabulary or number training for new languages.
+- **Implementing Design Patterns:** Refactor and improve code structure.
+- **Bug Fixing:** Identify and resolve bugs in the application.
+
 
  ## License
  This project is licensed under the MIT License. You are free to use, modify, and distribute this code under the terms of the license.
 
- ## Final words
- This project is part of my course Open-Source-Software at Seoul Nation University of Science and Technology (Seoultech).
+## Final Words
+This project is part of my course on **Open-Source Software** at **Seoul National University of Science and Technology (SeoulTech)**. It is designed to showcase how open-source development can contribute to language learning innovations. Your feedback and contributions are welcome!
 
