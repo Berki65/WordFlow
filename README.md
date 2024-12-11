@@ -31,20 +31,20 @@
 - Swift 5.7 or later
 
 ### Installation
-1. Clone the repository:
+#### 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/WordFlow.git
    cd WordFlow
    ```
-2. Open the project in Xcode:
+#### 2. Open the project in Xcode:
    ```bash
    open WordFlow.xcodeproj
    ```
-3. Install dependencies (if applicable):
+#### 3. Install dependencies (if applicable):
    ```
    pod install  # Or configure dependencies via Swift Package Manager
    ```
-4. Run the app on a simulator or connected device:
+#### 4. Run the app on a simulator or connected device:
    ```
    In Xcode, press Cmd + R.
    ```
