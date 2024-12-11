@@ -1,19 +1,60 @@
-//
-//  UserProfileView.swift
-//  KoreanApp
-//
-//  Created by Berkay Bentetik on 05.12.24.
-//
-
 import SwiftUI
+import SwiftData
 
 struct UserProfileView: View {
+    @Environment(\.modelContext) private var context
+    @State private var isEditing = false
+    @Bindable var user: User
+
     var body: some View {
-        
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if isEditing {
+                // Editing Mode: User can update their name
+                TextField("Enter new name", text: $user.name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+                // Action Buttons: Cancel and Save
+                HStack {
+                    Button("Cancel") {
+                        isEditing = false
+                    }
+                    .padding()
+
+                    Button("Save") {
+                        saveChanges()
+                        isEditing = false
+                    }
+                    .padding()
+                }
+            } else {
+                // Display Mode: Show user's profile details
+                Text("Account Details for \(user.name)")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+
+                // Edit Button: Switch to editing mode
+                Button("Edit Name") {
+                    isEditing = true
+                }
+                .padding()
+            }
+            Spacer()
+        }
+        .navigationTitle("Profile")
+    }
+
+    // Save Changes to the Context
+    private func saveChanges() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving changes: \(error)")
+        }
     }
 }
 
 #Preview {
-    UserProfileView()
+    UserProfileView(user: User(name: "John"))
 }

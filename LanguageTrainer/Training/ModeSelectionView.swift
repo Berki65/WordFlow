@@ -3,6 +3,7 @@ import SwiftUI
 enum PracticeMode: Hashable {
     case numbers
     case vocabulary
+    case translation
 }
 
 struct ModeSelectionView: View {
@@ -11,6 +12,7 @@ struct ModeSelectionView: View {
 
     var body: some View {
         VStack {
+            // Welcome Text
             Text("\(user.name), what would you like to practice in \(selectedLanguage)?")
                 .font(.title)
                 .fontWeight(.bold)
@@ -19,15 +21,16 @@ struct ModeSelectionView: View {
 
             Spacer()
 
+            // Mode Selection Buttons
             VStack(spacing: 20) {
-                // NavigationLink for Numbers
                 NavigationLink(value: PracticeMode.numbers) {
                     ModeButtonLabel(title: "\(selectedLanguage) Numbers")
                 }
-
-                // NavigationLink for Vocabulary
                 NavigationLink(value: PracticeMode.vocabulary) {
                     ModeButtonLabel(title: "\(selectedLanguage) Vocabulary")
+                }
+                NavigationLink(value: PracticeMode.translation) {
+                    ModeButtonLabel(title: "Translate Text")
                 }
             }
 
@@ -40,6 +43,7 @@ struct ModeSelectionView: View {
         }
     }
 
+    // Destination View Builder
     @ViewBuilder
     private func destinationView(for mode: PracticeMode) -> some View {
         switch (selectedLanguage, mode) {
@@ -48,13 +52,20 @@ struct ModeSelectionView: View {
         case ("Korean", .numbers):
             KoreanNumberView()
         case ("Korean", .vocabulary):
-            Text("Vocabulary Practice Coming Soon!") // Placeholder
+            KoreanVocabularyView()
+        case ("English", .vocabulary):
+            EnglishVocabularyView()
+        case (_, .translation):
+            TranslationView()
+        case ("German", .numbers):
+            Text("Kommt Bald!")
         default:
             Text("Coming Soon!")
         }
     }
 }
 
+// Custom Button Style
 struct ModeButtonLabel: View {
     let title: String
 

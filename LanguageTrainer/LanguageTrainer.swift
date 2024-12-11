@@ -6,7 +6,7 @@ struct LanguageTrainer: App {
     var body: some Scene {
         WindowGroup {
             RootView()
-                .modelContainer(for: [User.self])
+                .modelContainer(for: [User.self/*, VocabularyEntry.self*/])
         }
     }
 }

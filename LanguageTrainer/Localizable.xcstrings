@@ -1,19 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@" : {
-
-    },
-    "%@ %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ %2$@"
-          }
-        }
-      }
-    },
     "%@, what would you like to practice in %@?" : {
       "localizations" : {
         "en" : {
@@ -27,7 +14,10 @@
     "%lld" : {
 
     },
-    "Answer: %@" : {
+    "Account Details for %@" : {
+
+    },
+    "Cancel" : {
 
     },
     "Check" : {
@@ -39,6 +29,18 @@
     "Continue" : {
 
     },
+    "Edit Name" : {
+
+    },
+    "English Vocabulary" : {
+
+    },
+    "Enter new name" : {
+
+    },
+    "Enter text to translate:" : {
+
+    },
     "Enter your name" : {
 
     },
@@ -48,19 +50,19 @@
     "Friendly Mode" : {
 
     },
-    "Hello, World!" : {
-
-    },
-    "Input" : {
-
-    },
     "Key" : {
       "extractionState" : "manual"
+    },
+    "Kommt Bald!" : {
+
     },
     "Korean Vocabulary" : {
 
     },
     "Max Value" : {
+
+    },
+    "Next Word" : {
 
     },
     "Number Type" : {
@@ -69,20 +71,13 @@
     "Please let me know your name so we can get started!" : {
 
     },
-    "Practicing %@ in %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Practicing %1$@ in %2$@"
-          }
-        }
-      }
-    },
-    "Select Language" : {
+    "Practice Mode" : {
 
     },
-    "Select Max Value" : {
+    "Profile" : {
+
+    },
+    "Save" : {
 
     },
     "Select Mode" : {
@@ -94,22 +89,40 @@
     "Skip" : {
 
     },
-    "SKIP" : {
+    "Source Language" : {
+
+    },
+    "Target Language" : {
+
+    },
+    "Translate" : {
 
     },
     "Translate the following word:" : {
 
     },
-    "Type your answer here..." : {
+    "Translation result:" : {
 
     },
-    "Vocabulary Practice Coming Soon!" : {
+    "Type here..." : {
+
+    },
+    "Type your answer" : {
+
+    },
+    "Welcome Back!" : {
 
     },
     "Welcome to Language Trainer!" : {
 
     },
+    "What's this number?" : {
+
+    },
     "Which language would you like to study, %@?" : {
+
+    },
+    "비밀번호" : {
 
     }
   },

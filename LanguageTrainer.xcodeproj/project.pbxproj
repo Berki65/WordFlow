@@ -14,15 +14,31 @@
 		407EDDC72D02E2BB00F53DB5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 407EDDC62D02E2BB00F53DB5 /* Localizable.xcstrings */; };
 		407EDDC92D02EF3B00F53DB5 /* ModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EDDC82D02EF3B00F53DB5 /* ModeSelectionView.swift */; };
 		407EDDCB2D02F1D100F53DB5 /* KoreanVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EDDCA2D02F1D100F53DB5 /* KoreanVocabularyView.swift */; };
-		407EDDCD2D02F2B100F53DB5 /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EDDCC2D02F2B100F53DB5 /* PracticeView.swift */; };
 		4088B3632CFEAB82003DBB0D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088B3622CFEAB82003DBB0D /* HomeView.swift */; };
 		4088B3652CFEB1E0003DBB0D /* UserSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4088B3642CFEB1E0003DBB0D /* UserSetupView.swift */; };
+		409E7B832D094C3900A2680F /* AddWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B822D094C3900A2680F /* AddWordView.swift */; };
+		409E7B862D0965E700A2680F /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B852D0965E700A2680F /* TranslationView.swift */; };
+		409E7B882D098E6700A2680F /* EnglishVocabularyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B872D098E6700A2680F /* EnglishVocabularyView.swift */; };
+		409E7B8A2D0997D500A2680F /* VocabularyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B892D0997D500A2680F /* VocabularyData.swift */; };
+		409E7B8C2D0998F800A2680F /* VocabularyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */; };
 		40B045B72C80B96C0074E2C6 /* LanguageTrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B045B62C80B96C0074E2C6 /* LanguageTrainer.swift */; };
-		40B045B92C80B96C0074E2C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B045B82C80B96C0074E2C6 /* ContentView.swift */; };
 		40B045BB2C80B96D0074E2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B045BA2C80B96D0074E2C6 /* Assets.xcassets */; };
 		40B045BE2C80B96D0074E2C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B045BD2C80B96D0074E2C6 /* Preview Assets.xcassets */; };
 		40E2412F2CA1375E005C7DD9 /* KoreanNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E2412E2CA1375E005C7DD9 /* KoreanNumberView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		409E7B7C2D09454800A2680F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		407EDDBA2D016A7400F53DB5 /* EnglishNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishNumbersView.swift; sourceTree = "<group>"; };
@@ -32,12 +48,18 @@
 		407EDDC62D02E2BB00F53DB5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		407EDDC82D02EF3B00F53DB5 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
 		407EDDCA2D02F1D100F53DB5 /* KoreanVocabularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanVocabularyView.swift; sourceTree = "<group>"; };
-		407EDDCC2D02F2B100F53DB5 /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
 		4088B3622CFEAB82003DBB0D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4088B3642CFEB1E0003DBB0D /* UserSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetupView.swift; sourceTree = "<group>"; };
+		409E7B5E2D0942E700A2680F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		409E7B652D09454700A2680F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		409E7B672D09454700A2680F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		409E7B822D094C3900A2680F /* AddWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordView.swift; sourceTree = "<group>"; };
+		409E7B852D0965E700A2680F /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
+		409E7B872D098E6700A2680F /* EnglishVocabularyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishVocabularyView.swift; sourceTree = "<group>"; };
+		409E7B892D0997D500A2680F /* VocabularyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyData.swift; sourceTree = "<group>"; };
+		409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyEntry.swift; sourceTree = "<group>"; };
 		40B045B32C80B96C0074E2C6 /* LanguageTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B045B62C80B96C0074E2C6 /* LanguageTrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageTrainer.swift; sourceTree = "<group>"; };
-		40B045B82C80B96C0074E2C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		40B045BA2C80B96D0074E2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B045BD2C80B96D0074E2C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40E2412E2CA1375E005C7DD9 /* KoreanNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreanNumberView.swift; sourceTree = "<group>"; };
@@ -66,6 +88,7 @@
 		407EDDBC2D01732700F53DB5 /* UserData */ = {
 			isa = PBXGroup;
 			children = (
+				409E7B7D2D094BFD00A2680F /* Translation */,
 				407EDDBD2D01733E00F53DB5 /* UserDataHandler.swift */,
 				407EDDBF2D0173B400F53DB5 /* UserProfileView.swift */,
 				4088B3642CFEB1E0003DBB0D /* UserSetupView.swift */,
@@ -76,6 +99,7 @@
 		407EDDC12D0173F800F53DB5 /* LanguageTraining */ = {
 			isa = PBXGroup;
 			children = (
+				409E7B872D098E6700A2680F /* EnglishVocabularyView.swift */,
 				407EDDCA2D02F1D100F53DB5 /* KoreanVocabularyView.swift */,
 			);
 			path = LanguageTraining;
@@ -84,18 +108,46 @@
 		407EDDC42D017C0C00F53DB5 /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				407EDDCC2D02F2B100F53DB5 /* PracticeView.swift */,
 				407EDDC82D02EF3B00F53DB5 /* ModeSelectionView.swift */,
+				409E7B842D0965E200A2680F /* Translations */,
 				407EDDB92D016A5E00F53DB5 /* NumbersTraining */,
 				407EDDC12D0173F800F53DB5 /* LanguageTraining */,
 			);
 			path = Training;
 			sourceTree = "<group>";
 		};
+		409E7B642D09454700A2680F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				409E7B652D09454700A2680F /* WidgetKit.framework */,
+				409E7B672D09454700A2680F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		409E7B7D2D094BFD00A2680F /* Translation */ = {
+			isa = PBXGroup;
+			children = (
+				409E7B8B2D0998F800A2680F /* VocabularyEntry.swift */,
+				409E7B822D094C3900A2680F /* AddWordView.swift */,
+				409E7B892D0997D500A2680F /* VocabularyData.swift */,
+			);
+			path = Translation;
+			sourceTree = "<group>";
+		};
+		409E7B842D0965E200A2680F /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				409E7B852D0965E700A2680F /* TranslationView.swift */,
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
 		40B045AA2C80B96C0074E2C6 = {
 			isa = PBXGroup;
 			children = (
 				40B045B52C80B96C0074E2C6 /* LanguageTrainer */,
+				409E7B642D09454700A2680F /* Frameworks */,
 				40B045B42C80B96C0074E2C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,9 +168,9 @@
 				4088B3622CFEAB82003DBB0D /* HomeView.swift */,
 				407EDDC42D017C0C00F53DB5 /* Training */,
 				407EDDBC2D01732700F53DB5 /* UserData */,
-				40B045B82C80B96C0074E2C6 /* ContentView.swift */,
 				407EDDC62D02E2BB00F53DB5 /* Localizable.xcstrings */,
 				40B045BA2C80B96D0074E2C6 /* Assets.xcassets */,
+				409E7B5E2D0942E700A2680F /* Info.plist */,
 				40B045BC2C80B96D0074E2C6 /* Preview Content */,
 			);
 			path = LanguageTrainer;
@@ -142,6 +194,7 @@
 				40B045AF2C80B96C0074E2C6 /* Sources */,
 				40B045B02C80B96C0074E2C6 /* Frameworks */,
 				40B045B12C80B96C0074E2C6 /* Resources */,
+				409E7B7C2D09454800A2680F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -159,8 +212,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					40B045B22C80B96C0074E2C6 = {
 						CreatedOnToolsVersion = 15.4;
@@ -207,16 +260,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				407EDDC92D02EF3B00F53DB5 /* ModeSelectionView.swift in Sources */,
-				40B045B92C80B96C0074E2C6 /* ContentView.swift in Sources */,
 				40E2412F2CA1375E005C7DD9 /* KoreanNumberView.swift in Sources */,
 				407EDDBE2D01733E00F53DB5 /* UserDataHandler.swift in Sources */,
 				407EDDCB2D02F1D100F53DB5 /* KoreanVocabularyView.swift in Sources */,
 				407EDDC02D0173B400F53DB5 /* UserProfileView.swift in Sources */,
 				4088B3632CFEAB82003DBB0D /* HomeView.swift in Sources */,
-				407EDDCD2D02F2B100F53DB5 /* PracticeView.swift in Sources */,
 				407EDDC32D0179C900F53DB5 /* RootView.swift in Sources */,
 				40B045B72C80B96C0074E2C6 /* LanguageTrainer.swift in Sources */,
+				409E7B8A2D0997D500A2680F /* VocabularyData.swift in Sources */,
+				409E7B832D094C3900A2680F /* AddWordView.swift in Sources */,
+				409E7B882D098E6700A2680F /* EnglishVocabularyView.swift in Sources */,
+				409E7B862D0965E700A2680F /* TranslationView.swift in Sources */,
 				4088B3652CFEB1E0003DBB0D /* UserSetupView.swift in Sources */,
+				409E7B8C2D0998F800A2680F /* VocabularyEntry.swift in Sources */,
 				407EDDBB2D016A7400F53DB5 /* EnglishNumbersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +285,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -293,6 +350,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -351,12 +409,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LanguageTrainer/Preview Content\"";
 				DEVELOPMENT_TEAM = SKGT2RY3K4;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LanguageTrainer;
+				INFOPLIST_FILE = LanguageTrainer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordFlow;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,12 +444,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LanguageTrainer/Preview Content\"";
 				DEVELOPMENT_TEAM = SKGT2RY3K4;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = LanguageTrainer;
+				INFOPLIST_FILE = LanguageTrainer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WordFlow;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

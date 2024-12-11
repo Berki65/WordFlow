@@ -8,10 +8,12 @@ struct UserSetupView: View {
 
     var body: some View {
         ZStack {
+            // Background Color
             Color(.systemGray6)
                 .edgesIgnoringSafeArea(.all)
 
             VStack {
+                // Welcome Message
                 VStack(spacing: 10) {
                     Text("Welcome to Language Trainer!")
                         .font(.largeTitle)
@@ -30,14 +32,15 @@ struct UserSetupView: View {
 
                 Spacer()
 
+                // Name Input Field
                 TextField("Enter your name", text: $userName)
-                    .foregroundStyle(.primary)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal, 40)
                     .padding(.bottom, 200)
 
                 Spacer()
 
+                // Continue Button
                 Button(action: {
                     saveUserName(name: userName)
                 }) {
@@ -53,11 +56,15 @@ struct UserSetupView: View {
                 .padding(.bottom, 40)
             }
         }
+        // Navigate to HomeView when user is saved
         .fullScreenCover(isPresented: $isUserSaved) {
             HomeView(user: User(name: userName))
         }
     }
 
+    // MARK: - Methods
+
+    /// Saves the user's name to the model context
     private func saveUserName(name: String) {
         let user = User(name: name)
         modelContext.insert(user)

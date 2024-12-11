@@ -1,128 +1,194 @@
 import SwiftUI
 
 struct KoreanNumberView: View {
+    // MARK: - State Properties
     @State private var givenNumber = 0
     @State private var userInput = ""
     @State private var selectedNumberType: NumberType = .Sino
     @State private var friendlyNumberMode = false
-    @State private var maxValue = 10000001
     @State private var selectedMaxValue = 10000
     @State private var showAnswer = false
-    
-    var koreanSinoInEnglishToNine = ["yeong", "il", "i", "sam", "sa", "o", "yuk", "chil", "pal", "gu"]
-    var koreanSinoInKoreanToNine = ["영", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
-    var koreanNativeInKoreanToNine = ["공", "하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟", "아홉"]
-    var koreanTenner = ["십", "백", "천", "만", "십만", "백만", "천만", "억", "조"]
-    
+
+    // MARK: - Constants
+    let koreanSinoInKoreanToNine = ["영", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
+    let koreanNativeInKoreanToNine = ["공", "하나", "둘", "셋", "넷", "다섯", "여섯", "일곱", "여덟", "아홉"]
+    let koreanTenner = ["십", "백", "천", "만", "십만", "백만", "천만", "억", "조"]
+    let maxValueOptions = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
+
+    // MARK: - Enum
     enum NumberType: String, CaseIterable {
         case Sino
         case Native
     }
-    
-    let maxValueOptions = [10, 100, 1000, 10000, 100000, 1000000, 10000000]
-    
+
+    // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading) {
+        ZStack {
+            // Background Gradient
+            LinearGradient(
+                gradient: Gradient(colors: [Color.red.opacity(0.2), Color.red.opacity(0.5)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .edgesIgnoringSafeArea(.all)
+
             VStack {
-                Picker("Number Type", selection: $selectedNumberType) {
-                    ForEach(NumberType.allCases, id: \.self) { type in
-                        Text(type.rawValue).tag(type)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                
-                Toggle("Friendly Mode", isOn: $friendlyNumberMode)
-                Toggle("Show Answer", isOn: $showAnswer)
-                
-                Picker("Select Max Value", selection: $selectedMaxValue) {
-                    ForEach(maxValueOptions, id: \.self) { value in
-                        if !(selectedNumberType == .Native && value > 100) {  // Disable values above 100 for Native numbers
-                            Text("\(value)").tag(value)
-                        }
-                    }
-                }
-                .pickerStyle(.menu)
-                .padding(.horizontal)
+                // Card Display Section
+                cardSection
+                    .padding(.horizontal)
+
+                // Bottom Sheet Input Section
+                bottomSheetInputSection
+
+                Spacer()
+
+                // Controls Section
+                controlsSection
+                    .padding(.horizontal)
             }
-            .padding()
-            
-            Spacer()
-            
-            VStack {
-                Text("\(givenNumber)")
-                    .font(.largeTitle)
-                    .padding()
-                
-                if(showAnswer && selectedNumberType == .Sino) {
-                    Text("\(convertToSinoKorean(givenNumber))")
-                }
-                else if(showAnswer && selectedNumberType == .Native) {
-                    Text("\(convertToNativeKorean(givenNumber))")
-                }
-                
-                TextField("Input", text: $userInput)
-                    .keyboardType(.default)
-                    .textInputAutocapitalization(.never)
-                    .autocorrectionDisabled(true)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .onChange(of: userInput) {
-                        checkForAnswer()
-                    }
-                
-                Button("SKIP") {
-                    nextNumber()
-                }
-                .padding()
-            }
-            Spacer()
         }
         .onAppear {
             nextNumber()
         }
     }
-    
-    func randomNumberGenerator() {
-        maxValue = selectedMaxValue
-        
-        // Ensure Native Korean doesn't generate numbers above 99
+
+    // MARK: - Card Section
+    private var cardSection: some View {
+        VStack(spacing: 10) {
+            Text("Practice Mode")
+                .font(.title2.bold())
+                .foregroundColor(.primary)
+
+            Text("What's this number?")
+                .font(.headline)
+                .foregroundColor(.secondary)
+
+            Text("\(givenNumber)")
+                .font(.system(size: 64, weight: .bold, design: .rounded))
+                .foregroundColor(.primary)
+                .padding()
+
+            if showAnswer {
+                Text(convertedNumberText())
+                    .font(.title3)
+                    .foregroundColor(.blue)
+                    .padding(.top, 5)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white.opacity(0.85))
+                .shadow(radius: 10)
+        )
+    }
+
+    // MARK: - Bottom Sheet Input Section
+    private var bottomSheetInputSection: some View {
+        VStack(spacing: 10) {
+            TextField("Type your answer", text: $userInput)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .background(Color.white.opacity(0.85))
+                .cornerRadius(10)
+                .padding(.horizontal)
+                .onChange(of: userInput) {
+                    checkForAnswer()
+                }
+
+            Button(action: {
+                nextNumber()
+                userInput = ""
+            }) {
+                Text("Skip")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, minHeight: 50)
+                    .background(Color.red)
+                    .cornerRadius(10)
+                    .padding(10)
+            }
+            .padding(.horizontal)
+        }
+        .padding(.top)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white.opacity(0.85))
+                .shadow(radius: 10)
+        )
+        .padding(.horizontal)
+    }
+
+    // MARK: - Controls Section
+    private var controlsSection: some View {
+        VStack(spacing: 15) {
+            numberTypePicker
+
+            Toggle("Friendly Mode", isOn: $friendlyNumberMode)
+                .toggleStyle(SwitchToggleStyle(tint: Color.blue))
+
+            Toggle("Show Answer", isOn: $showAnswer)
+                .toggleStyle(SwitchToggleStyle(tint: Color.green))
+
+            maxValuePicker
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color.white.opacity(0.85))
+                .shadow(radius: 10)
+        )
+    }
+
+    // MARK: - Views
+    private var numberTypePicker: some View {
+        Picker("Number Type", selection: $selectedNumberType) {
+            ForEach(NumberType.allCases, id: \.self) { type in
+                Text(type.rawValue).tag(type)
+            }
+        }
+        .pickerStyle(SegmentedPickerStyle())
+    }
+
+    private var maxValuePicker: some View {
+        Picker("Max Value", selection: $selectedMaxValue) {
+            ForEach(maxValueOptions, id: \.self) { value in
+                if !(selectedNumberType == .Native && value > 100) {
+                    Text("\(value)").tag(value)
+                }
+            }
+        }
+        .pickerStyle(MenuPickerStyle())
+    }
+
+    // MARK: - Methods
+    private func convertedNumberText() -> String {
+        switch selectedNumberType {
+        case .Sino:
+            return convertToSinoKorean(givenNumber)
+        case .Native:
+            return convertToNativeKorean(givenNumber)
+        }
+    }
+
+    private func randomNumberGenerator() {
+        var maxValue = selectedMaxValue
+
         if selectedNumberType == .Native {
             maxValue = min(maxValue, 100)
         }
-        
+
         givenNumber = Int.random(in: 0..<maxValue)
         if friendlyNumberMode && givenNumber >= 1000 {
             givenNumber = (givenNumber / 1000) * 1000
         }
     }
-    
-    func nextNumber() {
+
+    private func nextNumber() {
         randomNumberGenerator()
     }
-    
-//    func convertToSinoKorean(_ number: Int) -> String {
-//        guard number > 0 else {
-//            return koreanSinoInKoreanToNine[0]
-//        }
-//        
-//        var result = ""
-//        var num = number
-//        var unitIndex = 0
-//        
-//        let units = ["", "십", "백", "천", "만", "십만", "백만", "천만", "억", "조"]
-//        
-//        while num > 0 {
-//            let part = num % 10
-//            if part != 0 {
-//                let partString = (part > 1 || unitIndex == 0 || unitIndex >= 4) ? koreanSinoInKoreanToNine[part] + units[unitIndex] : units[unitIndex]
-//                result = partString + result
-//            }
-//            num /= 10
-//            unitIndex += 1
-//        }
-//        
-//        return result
-//    }
+
     
     func convertToSinoKorean(_ number: Int) -> String {
         guard number > 0 else {
@@ -182,7 +248,7 @@ struct KoreanNumberView: View {
         
         return result
     }
-
+    
     func convertTwoDigitNumberToKorean(_ number: Int, omitOne: Bool = false) -> String {
         let koreanSinoInKoreanToNine = ["영", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"]
         
@@ -219,8 +285,8 @@ struct KoreanNumberView: View {
             return tensPart + unitsPart
         }
     }
-    
-    func checkForAnswer() {
+
+    private func checkForAnswer() {
         let correctAnswer: String
         switch selectedNumberType {
         case .Sino:
@@ -228,7 +294,7 @@ struct KoreanNumberView: View {
         case .Native:
             correctAnswer = convertToNativeKorean(givenNumber)
         }
-        
+
         if userInput.trimmingCharacters(in: .whitespacesAndNewlines) == correctAnswer {
             userInput = ""
             nextNumber()
