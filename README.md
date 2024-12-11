@@ -19,8 +19,8 @@
 ## Screenshots
 
 <!-- Replace with actual screenshots -->
-![Vocabulary Training]([Simulator Screenshot - iPhone 16 Pro - 2024-12-11 at 17 23 03](https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e)
-.png)
+![Vocabulary Training](https://github.com/user-attachments/assets/1067fb70-f0f0-4f4f-9cae-f6bc1b423a4e)
+
 ![Number Training](path-to-screenshot2.png)
 ![Fast Translations](path-to-screenshot3.png)
 
