@@ -10,7 +10,7 @@ Link to the **app** on TestFlight: https://testflight.apple.com/join/PbtTnCdp
  _Note: To test the app on TestFlight, ensure you have the TestFlight app installed on your iOS device._
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
-![iOS 16.1+](https://img.shields.io/badge/iOS-16.1%2B-blue.svg)
+![iOS 1*](https://img.shields.io/badge/iOS-18%2B-blue.svg)
 ![Swift](https://img.shields.io/badge/Swift-6.0-orange)
 
 ## Table of Contents
