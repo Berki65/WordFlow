@@ -1,5 +1,5 @@
 <div style="display: flex; justify-content: space-between;">
-<img src="https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f" alt="logo" width="10%"/?
+<img src="https://github.com/user-attachments/assets/ea1d82c7-7a0d-45f3-8162-2890e4f7494f" alt="logo" width="10%"/>
 </div>
 	
  # WordFlow
@@ -74,4 +74,7 @@ Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
 
  ## License
  This project is licensed under the MIT License. You are free to use, modify, and distribute this code under the terms of the license.
+
+ ## Final words
+ This project is part of my course Open-Source-Software at Seoul Nation University of Science and Technology (Seoultech).
 
