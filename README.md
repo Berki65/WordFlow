@@ -2,6 +2,8 @@
 
 **WordFlow** is an open-source Swift iOS application designed to make language learning simple and fun. The app focuses on helping users study vocabulary, practice numbers, and quickly translate words in multiple languages.
 
+Link to TestFlight: https://testflight.apple.com/join/PbtTnCdp
+
 ## Table of Contents
 - [Key Features](#key-features)
 - [Screenshots](#screenshots)
